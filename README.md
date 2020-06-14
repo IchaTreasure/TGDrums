@@ -14,5 +14,4 @@ or visit https://docs.aws.amazon.com/console/cloud9/ for our documentation.
 
 Happy coding!
 
-
 [![Build Status](https://travis-ci.org/IchaTreasure/TGDrums.svg?branch=master)](https://travis-ci.org/IchaTreasure/TGDrums)
