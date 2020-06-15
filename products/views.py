@@ -5,7 +5,10 @@ from .models import Product
 def all_products(request):
     products = Product.objects.all()
     return render(request, "products.html", {"products": products})
+    
 
 def product_detail(request, pk):
-    products = get_object_or_404(Product, pk=pk)
+    products = Product.objects.all()
+    if pk:
+        products = get_object_or_404(Product, id=pk)
     return render(request, "productdetail.html", {"products": products})
