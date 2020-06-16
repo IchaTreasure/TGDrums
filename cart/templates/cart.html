@@ -6,29 +6,30 @@
 <div class="row row-flex">
     {% for item in cart_items %}
     
-    <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
+    <!--<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">-->
+    <div class="col-lg-3 col-md-6 mb-4 panel panel-default">
         
         <div class="panel-body" style="box-shadow: 5px 10px #888888; border-radius: 8px; background-color: white; margin-bottom: 10px;">
         
         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
         
         <div class="caption">
-            <h6 style="margin-left: 10px;">{{ item.product.name }}</h6>
+            <h6 class="text-warning" style="margin-left: 10px;">{{ item.product.name }}</h6>
             <!--<p class="product-description">{{ item.product.description }}</p>-->
-            <p style="margin-left: 10px;">{{ item.product.price }}</p>
+            <p style="margin-left: 10px;">£ {{ item.product.price }}</p>
             <p>
                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <div class="form-group">
                         <label for="exampleInputAmount" class="sr-only">New Quantity</label>
                         <div class="input-group">
-                            <div class="input-group-addon" style="margin-left: 10px;">Quantity</div>
-                            <input style="margin-left: 10px;" name="quantity" type="number" min="0" max="999" class="form-control" required>
-                            <div class="input-group-addon" style="margin-left: 10px;">{{item.quantity}}</div>
+                            <div class="input-group-addon" style="margin-left: 5px; margin-top: 5px;">Quantity</div>
+                            <input style="margin-left: 5px;" name="quantity" type="number" min="0" max="99" class="form-control" required>
+                            <div class="input-group-addon" style="margin-left: 5px; margin-top: 5px;">x{{item.quantity}}</div>
                         </div>
                     </div>
                     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
-                    <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Amend</button>
+                    <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Adjust</button>
                     </div>
                 </form>
             </p>
@@ -37,14 +38,14 @@
     </div>
     {% endfor %}
 </div>
-<br>
-<div class="row" style="margin-left: 30px;">
-    <p>Total</p>
+
+<div class="row" style="margin-left: 10px;">
+    <h5>Total:</h5>
 </div>
-<div class="row" style="margin-left: 30px;">
-      <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>£ {{ total }}</p>
+<div class="row" style="margin-left: 10px;">
+      <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span> <h5>£ {{ total }}</h5></p>
 </div>
-<div class="row" style="margin-left: 25px;">
+<div class="row" style="margin-left: 15px;">
     <a href="{% url 'checkout' %}" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 </div>
 

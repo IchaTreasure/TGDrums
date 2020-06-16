@@ -29,7 +29,7 @@ from .settings import MEDIA_ROOT
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', homepage, name='home'),
-    url(r'^home/', homepage, name='home'),
+    url(r'^home/', all_products, name='index'),
     url(r'^about/', aboutUs, name='about'),
     url(r'^accounts/', include(urls_accounts)),
     url(r'^products/', include(urls_products)),
