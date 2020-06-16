@@ -28,7 +28,7 @@ from .settings import MEDIA_ROOT
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', all_products, name='index'),
+    url(r'^$', homepage, name='home'),
     url(r'^home/', homepage, name='home'),
     url(r'^about/', aboutUs, name='about'),
     url(r'^accounts/', include(urls_accounts)),
@@ -38,3 +38,5 @@ urlpatterns = [
     url(r'^search/', include(urls_search)),
     url(r'^media/(?P<path>.*)$', static.serve, {'document_root': MEDIA_ROOT})
 ]
+
+"""url(r'^$', all_products, name='index'),"""
