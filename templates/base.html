@@ -21,13 +21,13 @@
     <link rel="stylesheet" href="{% static 'css/header-style.css' %}" type="text/css" />
 </head>
 
-<body style="background-color: #AEB6BF;">
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background-color: #2c3e50;">
+<body style="background-color: #ffffff;">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top" style="background-color: #000000;">
         <a class="navbar-brand" href="/">
-                <img src="/media/images/drums.png"></img>
+                <img src="/media/images/logo-pic.png"></img>
             </a>
-        <button class="navbar-toggler navbar-dark text-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon text-dark"></span>
+        <button class="navbar-toggler navbar-dark text-warning" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon text-warning"></span>
   </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -39,6 +39,22 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-warning" href="{% url 'products' %}">Shop</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Categories
+        </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000;">
+                        <a class="dropdown-item text-warning" href="#">Acoustic Drums</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-warning" href="#">Electric Drums</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-warning" href="#">Cymbals</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-warning" href="#">Snare Drums</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-warning" href="#">Drum Sticks</a>
+                    </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="{% url 'search' %}" method="get">
@@ -86,7 +102,7 @@
     </div>
     
    <!-- Footer -->
-  <footer class="navbar-dark" style="background-color: #2c3e50; text-align: center;">
+  <footer class="navbar-dark" style="background-color: #000000; text-align: center;">
     <div class="container">
       <br>
       <h4 style="color: #FFA500">Social Media</h4>

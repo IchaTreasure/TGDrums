@@ -1,6 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-dark">
+            <h1>All Products</h1>
+            <hr>
+        </div>
+    </div>
+</div>
+
 <div class="row row-flex">
     {% for product in products %}
         <!--<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">-->
@@ -16,7 +25,7 @@
                 
                     <form method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
-                    <div class="input-group">
+                    <div class="input-group" style="padding-left: 30px; padding-right: 30px;">
                         <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity" required>
                         <span class="input-group-btn">
                             <button class="btn btn-warning" type="submit">Add</button>
