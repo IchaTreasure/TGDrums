@@ -23,7 +23,7 @@
                 <p style="margin-left: 10px;">£ {{ product.price }}</p>
                 <p style="margin-left: 10px;"><a href="{% url 'product_detail' product.id %}" class="btn btn-warning">Read more</a></p>
                 
-                    <form method="post" action="{% url 'add_to_cart' product.id %}">
+                   <!-- <form method="post" action="{% url 'add_to_cart' product.id %}">
                     {% csrf_token %}
                     <div class="input-group" style="padding-left: 30px; padding-right: 30px;">
                         <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity" required>
@@ -31,7 +31,7 @@
                             <button class="btn btn-warning" type="submit">Add</button>
                         </span>
                     </div>
-                </form>
+                </form>-->
             </div>
         </div>
     {% endfor %}

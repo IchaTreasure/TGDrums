@@ -72,7 +72,11 @@
       <br>
       <img class="card-img-top" src="/media/images/snareCat.jpg" alt="Snare Drum" style="padding-bottom: 20px;"></img>
       <div class="card-footer" style="background-color: white;">
-        <a href="#" class="btn btn-warning btn-lg active">Snare Drums</a>
+        <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
+        <input type="text" class="form-control d-none" value="Snare" name="q">
+        <button class="btn btn-warning btn-lg active" type="search">Snare Drums</button>
+        </form>
+        <!--<a href="#" class="btn btn-warning btn-lg active">Snare Drums</a>-->
       </div>
     </div>
   </div>
