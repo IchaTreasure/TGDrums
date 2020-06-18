@@ -77,7 +77,7 @@
             </form>
             <ul class="navbar-nav navbar-right">
                 {% if user.is_authenticated %}
-                <li class="nav-item"><a class="nav-link text-warning" href="{% url 'profile' %}">Profile</a></li>
+                <li class="nav-item"><a class="nav-link text-warning" href="{% url 'profile' %}">Hello {{ user.username }}!</a></li>
                 <li class="nav-item"><a class="nav-link text-warning" href="{% url 'logout' %}">Log Out</a></li>
                 {% else %}
                 <li class="nav-item"><a class="nav-link text-warning" href="{% url 'register' %}">Register</a></li>

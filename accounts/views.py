@@ -16,7 +16,7 @@ def logout(request):
     """A view that logs the user out and redirects back to the index page"""
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
-    return redirect(reverse('index'))
+    return redirect(reverse('home'))
 
 
 def login(request):
@@ -35,7 +35,7 @@ def login(request):
                     next = request.GET['next']
                     return HttpResponseRedirect(next)
                 else:
-                    return redirect(reverse('index'))
+                    return redirect(reverse('home'))
             else:
                 user_form.add_error(None, "Your username or password are incorrect")
     else:
