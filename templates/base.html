@@ -46,22 +46,27 @@
         </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #000000;">
                         <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
-                        <input type="text" class="form-control d-none" value="Snare" name="q">
+                        <input type="text" class="form-control d-none" value="DRUM SET" name="q">
+                        <button class="btn btn-basic text-warning arimo-font" type="search" style="background-color: #000000;">Acoustic Drums</button>
+                        </form>
+                        <div class="dropdown-divider" style="background-color: #000000;"></div>
+                        <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
+                        <input type="text" class="form-control d-none" value="SNARE DRUM" name="q">
                         <button class="btn btn-basic text-warning arimo-font" type="search" style="background-color: #000000;">Snare Drums</button>
                         </form>
                         <div class="dropdown-divider" style="background-color: #000000;"></div>
                         <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
-                        <input type="text" class="form-control d-none" value="Snare" name="q">
+                        <input type="text" class="form-control d-none" value="ELECTRONIC DRUM KIT" name="q">
                         <button class="btn btn-basic text-warning arimo-font" type="search" style="background-color: #000000;">Electric Drums</button>
                         </form>
                         <div class="dropdown-divider" style="background-color: #000000;"></div>
                         <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
-                        <input type="text" class="form-control d-none" value="Snare" name="q">
+                        <input type="text" class="form-control d-none" value="Cymbal" name="q">
                         <button class="btn btn-basic text-warning arimo-font" type="search" style="background-color: #000000;">Cymbals</button>
                         </form>
                         <div class="dropdown-divider" style="background-color: #000000;"></div>
                         <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
-                        <input type="text" class="form-control d-none" value="LUDWIG" name="q">
+                        <input type="text" class="form-control d-none" value="DRUMSTICKS" name="q">
                         <button class="btn btn-basic text-warning arimo-font" type="search" style="background-color: #000000;">Drum Sticks</button>
                         </form>
                     </div>
