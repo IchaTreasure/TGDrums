@@ -99,8 +99,6 @@ caption p {
     min-height: 40px;
 }
 
-
-
 hr {
   box-sizing: content-box;
   height: 0;
@@ -116,3 +114,4 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
 }
+

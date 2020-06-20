@@ -14,10 +14,9 @@
         <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
         
         <div class="caption">
-            <h6 class="text-warning" style="margin-left: 10px;">{{ item.product.name }}</h6>
-            <!--<p class="product-description">{{ item.product.description }}</p>-->
-            <p style="margin-left: 10px;">£ {{ item.product.price }}</p>
-            <p>
+            <h6 style="margin-left: 10px;">{{ item.product.name }}</h6>
+            <h5 style="margin-left: 10px;">£ {{ item.product.price }}</h5>
+            <hr>
                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <div class="form-group">
@@ -32,7 +31,7 @@
                     <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Adjust</button>
                     </div>
                 </form>
-            </p>
+        
         </div>
         </div>
     </div>
