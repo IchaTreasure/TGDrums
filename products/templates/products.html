@@ -10,7 +10,6 @@
 
 <div class="row row-flex">
     {% for product in products %}
-    <!--<div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-default">-->
     <div class="col-lg-3 col-md-6 mb-4 panel panel-default">
         <div class="panel-body" style="box-shadow: 5px 10px #888888; border-radius: 8px; background-color: white; margin-bottom: 10px;">
             <br>
@@ -20,22 +19,12 @@
             <br>
             <hr>
             <h6 style="margin-left: 10px;"><a href="{% url 'product_detail' product.id %}" class="text-dark">{{ product.name }}</a></h6>
-            <!--<p class="product-description">{{ product.description }}</p>-->
             <p class="text-success"> <svg class="bi bi-arrow-up-right-circle-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="margin-left: 10px;">
             <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.5 5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V6.707l-4.146 4.147a.5.5 0 0 1-.708-.708L9.293 6H6.5a.5.5 0 0 1 0-1z"/>
             </svg> Stock Available </p>
             <h5 style="margin-left: 10px;">£ {{ product.price }}</h5>
             <p style="margin-left: 10px;"><a href="{% url 'product_detail' product.id %}" class="btn btn-warning">Read more</a></p>
 
-            <!-- <form method="post" action="{% url 'add_to_cart' product.id %}">
-                    {% csrf_token %}
-                    <div class="input-group" style="padding-left: 30px; padding-right: 30px;">
-                        <input name="quantity" type="number" min="1" max="999" class="form-control" placeholder="Quantity" required>
-                        <span class="input-group-btn">
-                            <button class="btn btn-warning" type="submit">Add</button>
-                        </span>
-                    </div>
-                </form>-->
         </div>
     </div>
     {% endfor %}
