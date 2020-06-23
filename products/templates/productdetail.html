@@ -33,10 +33,54 @@
         </div>
     </div>
 
-    <h2>Description</h2>
+    <!--<h2>Description</h2>
     <hr>
-    <p class="product-description">{{ product.description }}</p>
+    <p class="product-description">{{ product.description }}</p> -->
 
+<!--Accordion wrapper-->
+<div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+  <!-- Accordion card -->
+  <div class="card">
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingOne1">
+      <a data-toggle="collapse" data-parent="#accordionEx" href="#collapseOne1" aria-expanded="true"
+        aria-controls="collapseOne1">
+        <h4 class="mb-0 text-dark">
+          Description <i class="fas fa-angle-down rotate-icon text-dark"></i>
+        </h4>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1"
+      data-parent="#accordionEx">
+      <div class="card-body">
+        {{ product.description }}
+      </div>
+    </div>
+  </div>
+  
+    <!-- Accordion card -->
+  <div class="card">
+    <!-- Card header -->
+    <div class="card-header" role="tab" id="headingTwo2">
+      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+        aria-expanded="false" aria-controls="collapseTwo2">
+        <h4 class="mb-0 text-dark">
+          Reviews <i class="fas fa-angle-down rotate-icon text-dark"></i>
+        </h4>
+      </a>
+    </div>
+
+    <!-- Card body -->
+    <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+      data-parent="#accordionEx">
+      <div class="card-body">
+        No Reviews
+      </div>
+    </div>
+  </div>
+  
+</div>
 </div>
 {% endblock %}
-
