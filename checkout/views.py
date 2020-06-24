@@ -11,7 +11,6 @@ import stripe
 # Create your views here.
 stripe.api_key = settings.STRIPE_SECRET
 
-
 @login_required()
 def checkout(request):
     if request.method == "POST":
@@ -38,7 +37,7 @@ def checkout(request):
             try:
                 customer = stripe.Charge.create(
                     amount=int(total * 100),
-                    currency="EUR",
+                    currency="GBP",
                     description=request.user.email,
                     card=payment_form.cleaned_data['stripe_id']
                 )

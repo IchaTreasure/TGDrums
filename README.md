@@ -20,10 +20,19 @@ When a user clicks the read more button to view a product they can view the prod
 </p> 
 
 
+<h2>Database Design</h2>
+<img src="/media/images/Database design.jpeg">
+<br>
+
+
 <h2>User Stories</h2>
 <p>This web application is accesible for all user from mobile device and desktop.</p>
 
 <p> As a new user I'm able to do the following:</p>
+
+<p>• View the Homepage</p>
+<img src="/media/images/Home pic.jpeg">
+<br>
 
 <p>• Register/ Login to use the online shop.</p>
 <img src="">
@@ -32,11 +41,22 @@ When a user clicks the read more button to view a product they can view the prod
 <br>
 
 <p>• Go to the Shop page where all the products will be shown.</p>
-<img src="">
+<img src="/media/images/Shop PIC.jpeg">
 <br>
 
 <p>• The user is able to search for a product with the help of the search form on the navbar</p>
+
 <p>• The user is able to see a product description by clicking on the read more botton on the product cards</p>
+<img src="/media/images/Product PIC.jpeg">
+<br>
+
+<p>• The user is able to add a product to the shopping cart</p>
+<img src="/media/images/cart PIC.jpeg">
+<br>
+
+<p>• The user is able to make a payment for a product</p>
+<img src="/media/images/Checkout PIC.jpeg">
+<br>
 
 
 <h2>Features</h2>
