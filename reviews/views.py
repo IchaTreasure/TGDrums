@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from .models import Post
 from .forms import ReviewPostForm
@@ -22,7 +23,8 @@ def post_detail(request, pk):
     post.views += 1
     post.save()
     return render(request, "reviewdetails.html", {'post': post})
-    
+
+@login_required()  
 def create_or_edit_post(request, pk=None):
     """
     Create a view that allows user to create or edit a post depending 

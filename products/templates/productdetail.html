@@ -107,11 +107,11 @@
     <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
       data-parent="#accordionEx">
       <div class="card-body">
-        No Reviews
+       
+        <a href="{% url 'new_post' %}" class="btn btn-warning">Add Review</a>
         <br>
-        <a href="{% url 'new_post' %}">Add Review</a>
         <br>
-        <a href="{% url 'get_posts' %}">Reviews</a>
+        <a href="{% url 'get_posts' %}" class="btn btn-warning">Reviews</a>
       </div>
     </div>
   </div>
