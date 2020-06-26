@@ -25,35 +25,35 @@ When a user clicks the read more button to view a product they can view the prod
 <br>
 
 <h2>User Stories</h2>
-<h6>This web application is accesible for all user from mobile device and desktop.</h6>
+<p>This web application is accesible for all user from mobile device and desktop.</p>
 
-<h6> As a new user I'm able to do the following:</h6>
+<p> As a new user I'm able to do the following:</p>
 
-<h6>• View the Homepage</h6>
+<p>• View the Homepage</p>
 <img src="/media/images/Home pic.jpeg">
 <br>
 
-<h6>• Register/ Login to use the online shop.</h6>
+<p>• Register/ Login to use the online shop.</p>
 <img src="">
 <br>
 <img src="">
 <br>
 
-<h6>• Go to the Shop page where all the products will be shown.</h6>
+<p>• Go to the Shop page where all the products will be shown.</p>
 <img src="/media/images/Shop PIC.jpeg">
 <br>
 
-<h6>• The user is able to search for a product with the help of the search form on the navbar</h6>
+<p>• The user is able to search for a product with the help of the search form on the navbar</p>
 
-<h6>• The user is able to see a product description by clicking on the read more botton on the product cards</h6>
+<p>• The user is able to see a product description by clicking on the read more botton on the product cards</p>
 <img src="/media/images/Product PIC.jpeg">
 <br>
 
-<h6>• The user is able to add a product to the shopping cart</h6>
+<p>• The user is able to add a product to the shopping cart</p>
 <img src="/media/images/cart PIC.jpeg">
 <br>
 
-<h6>• The user is able to make a payment for a product</h6>
+<p>• The user is able to make a payment for a product</p>
 <img src="/media/images/Checkout PIC.jpeg">
 <br>
 
