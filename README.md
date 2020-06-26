@@ -67,15 +67,15 @@ When a user clicks the read more button to view a product they can view the prod
 <p>• Products by categories: 5 main product categories</p>
 
 <h2> Future features </h2>
-<h5>Due to the steeper learning curve of Django and project time constraints, many features that I want to implement 
-to make the ecommerce website more complete were left out.</h5>
-<h6>• Profiles: Multiple Addresses, Wishlist, Storing Address in Order Model</h6>
+<p>Due to the steeper learning curve of Django and project time constraints, many features that I want to implement 
+to make the ecommerce website more complete were left out.</p>
+<p>• Profiles: Multiple Addresses, Wishlist, Storing Address in Order Model</p>
 <p>The profile app can allow for multiple addresses. Order made to the address should also be stored in the order transaction history, 
 or to be more precise, the Order Model. A wishlist feature can be implemented for users to add products they want for future reference.</p>
-<h6>• Reviews.</h6>
-<h6>• Pagination </h6>
-<h6>• Sending Email for Verification </h6>
-<h6>Discount Codes</h6>
+<p>• Reviews.</p>
+<p>• Pagination </p>
+<p>• Sending Email for Verification </p>
+<p>Discount Codes</p>
 <p>Like most online shopping businesses these days, there can be a discount code system that provides various benefits to 
 customers such as a price discount or free gifts.
 </p>
@@ -83,10 +83,13 @@ customers such as a price discount or free gifts.
 
 <h2>Tools/Technologies</h2>
 <h3>Html</h3>
+<p>A standard markup language for documents designed to be displayed in a web browser.</p>
 
 <h3>CSS</h3>
+<P>A language that describes the style of a HTML document.</p>
 
 <h3>Python</h3>
+<p>A language used on a server to create web applications.</p>
 
 <h3>Google Fonts</h3>
 <p>Used to style the fonts of the website.</p>
