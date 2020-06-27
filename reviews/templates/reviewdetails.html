@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
  <div style="margin-right: 90px;">
-            <h3>{{ post.title }}</h3>
-            </div>
-    <div class="row">
-       
+ <h3>{{ post.title }}</h3>
+ </div>
+ <hr>
+    <div class="row" style="padding-left: 20px;">
         <div class="col-sm-10 col-md-9">
-            
             <div class="row">
                 <div class="col-xs-9">
                     <p>{{ post.content }}</p>
+                    <br>
                     <p><span class="boldtext">Published on:</span> {{ post.published_date }} </p>
                     <p><span class="boldtext">Views:</span> {{post.views}}</p>
-                    {% if user.is_authenticated %}
+                    <!--{% if user.is_authenticated %}
                     <a href="{% url 'get_posts' %}" class="btn btn-default">Back to Blog</a>
                     <a href="{% url 'edit_post' post.id %}" class="btn btn-default">Edit Post</a>
-                    {% endif %}
+                    {% endif %}-->
                     <hr>
                 </div>
             </div>

@@ -1,4 +1,3 @@
-
 from django.db import models
 from products.models import Product
 
@@ -22,7 +21,6 @@ class OrderLineItem(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE, null=False)
     product = models.ForeignKey(Product, on_delete=models.CASCADE, null=False)
     quantity = models.IntegerField(blank=False)
-
     def __str__(self):
         return "{0} {1} @ {2}".format(
             self.quantity, self.product.name, self.product.price)
