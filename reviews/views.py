@@ -7,7 +7,7 @@ from .forms import ReviewPostForm
 # Create your views here.
 def get_posts(request):
     """
-    Create a view that returns posts that have already been posted
+    Create a view that returns reviews that have already been posted
     """
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     
@@ -15,8 +15,8 @@ def get_posts(request):
     
 def post_detail(request, pk):
     """
-    Create a view to return a single post object based on the Post ID(pk)
-    and render it to postdetail.html template or return a 404 error if no 
+    Create a view to return a single review object based on the Post ID(pk)
+    and render it to reviewdetails.html template or return a 404 error if no 
     post is found
     """
     post = get_object_or_404(Post, pk=pk)
@@ -26,10 +26,6 @@ def post_detail(request, pk):
 
 @login_required()  
 def create_or_edit_post(request, pk=None):
-    """
-    Create a view that allows user to create or edit a post depending 
-    if the Post ID is null or not 
-    """
     post = get_object_or_404(Post, pk=pk) if pk else None
     if request.method == "POST":
         form = ReviewPostForm(request.POST, request.FILES, instance=post)
