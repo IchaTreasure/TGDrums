@@ -8,11 +8,9 @@ class TestsFormsForAccountsApp(TestCase):
         """Tests if a user is able to registrater/ create an account"""
         form = UserRegistrationForm(
             {
-                'email': 'afang@gmail.com', 
-                'username': 'User1', 
-                'password1': 'User1Registration', 
+                'email': 'afang@gmail.com',
+                'username': 'User1',
+                'password1': 'User1Registration',
                 'password2': 'User1Registration'
             })
         self.assertTrue(form.is_valid())
-
-        

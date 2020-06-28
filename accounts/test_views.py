@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from checkout.models import Order, OrderLineItem
 from django.utils import timezone
 
+
 class TestViewsForAccountsApp(TestCase):
     def test_home_page(self):
         """Tests if homepage is rendered correctly"""
@@ -13,7 +14,9 @@ class TestViewsForAccountsApp(TestCase):
         self.assertTemplateUsed(page, "home.html")
 
     def test_login_page(self):
-        """Tests to check if the login page is rendered correctly and also checking that it is reversed properly"""
+        """Tests to check if the login page is rendered correctly
+        and also checking that it is reversed properly
+        """
         page = self.client.get("/accounts/login/")
         self.assertEqual(page.status_code, 200)
         self.assertTemplateUsed(page, "login.html")
