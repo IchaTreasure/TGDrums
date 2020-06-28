@@ -19,7 +19,6 @@ searches the database for any product.
 When a user clicks the read more button to view a product they can view the product description and add the product tot the cart if they want. 
 </p> 
 
-
 <h2>Database Design</h2>
 <hr>
 <img src="/media/images/Database design.jpeg">
