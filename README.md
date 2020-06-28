@@ -227,17 +227,12 @@ successfully. All colour and text is consistent, all elements are aligned correc
 
 <h5>Automated testing</h5>
 <hr>
-<p>The unittest framework built into Django was used for testing some modules in each app using the unittest framework built into Django and running the coverage report 
+<p>The unittest framework built into Django was used for testing some modules in each app and running the coverage report 
 to get a detailed report of how well each Django module was tested. Where I was not able to automate tests for that particular module I 
 used manually testing thoroughly to ensure my app was tested throughout.</p>
 
 <p>Travis CI was implemented to help continuously test my app through the development process. You can click the 'build passing' icon at the top 
 of my repo to check out Travis on this app.</p>
-
-
-
-
-
 
 <h2>Bugs</h2>
 <hr>
