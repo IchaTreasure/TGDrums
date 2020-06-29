@@ -13,11 +13,11 @@
 
     <form method="post" action="{% url 'login' %}?next={{ next }}" class="accountform">
         <fieldset class="form-group">
+            <legend>Sign into your account</legend>
+            <p>Don't have an account? <a href="{% url 'register' %}" class='text-warning'>Register Here</a></p>
             {% csrf_token %}
             {{ user_form | as_bootstrap }}
-            
              <p><a href="{% url 'password_reset' %}" class="text-warning">Forgot my password</a></p>
-             
             <button type="submit" class="btn btn-warning">Login</button>
         </fieldset>
     </form>
