@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/IchaTreasure/TGDrums.svg?branch=master)](https://travis-ci.org/IchaTreasure/TGDrums)
 
 <h1>TGDrums</h1>
+<p>The site has been deployed using Heroku and is available to visit here: http://tgdrums.herokuapp.com/</p>
 
 <h2> WHAT IS IT? </h2>
 <hr>
@@ -262,7 +263,7 @@ of my repo to check out Travis on this app.</p>
 
 <p>The repository can be found on: https://github.com/IchaTreasure/TGDrums</p>
 
-<p>The site has been deployed using GitHub Pages and is available to visit here: http://tgdrums.herokuapp.com/</p>
+<p>The site has been deployed using Heroku and is available to visit here: http://tgdrums.herokuapp.com/</p>
 
 <h2>Credits</h2>
 <p>I would to credit the following sources for their inspiration:</p> 
