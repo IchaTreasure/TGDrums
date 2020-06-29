@@ -1,5 +1,9 @@
-{% extends 'base.html' %} {% load static from staticfiles %} {% load bootstrap_tags %} {% block content %}
+{% extends 'base.html' %} 
+{% load static from staticfiles %} 
+{% load bootstrap_tags %} 
+{% block content %}
 
+<!-- Home Page Header -->
 <br>
 <header>
   <div class="overlay"></div>
@@ -21,6 +25,7 @@
 <br>
 <hr>
 
+<!-- Category section Header -->
 <br>
 <div class="container h-100">
   <div class="d-flex h-100 text-center align-items-center">
@@ -32,7 +37,7 @@
 </div>
 <br>
 
-<!-- Page Features -->
+<!-- Category section -->
 <div class="row text-center">
 
   <div class="col-lg-3 col-md-6 mb-4">
@@ -41,9 +46,9 @@
       <img class="card-img-top" src="/media/images/AcousticCat.jpg" alt="Acoustic Drum" style="padding-bottom: 20px;"></img>
       <br>
       <div class="card-footer" style="background-color: white;">
-      <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
-        <input type="text" class="form-control d-none" value="DRUM SET" name="q">
-        <button class="btn btn-warning btn-lg active" type="search">Acoustic Drums</button>
+        <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
+          <input type="text" class="form-control d-none" value="DRUM SET" name="q">
+          <button class="btn btn-warning btn-lg active" type="search">Acoustic Drums</button>
         </form>
       </div>
     </div>
@@ -55,8 +60,8 @@
       <br>
       <div class="card-footer" style="background-color: white;">
         <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
-        <input type="text" class="form-control d-none" value="ELECTRONIC DRUM KIT" name="q">
-        <button class="btn btn-warning btn-lg active" type="search">Electric Drums</button>
+          <input type="text" class="form-control d-none" value="ELECTRONIC DRUM KIT" name="q">
+          <button class="btn btn-warning btn-lg active" type="search">Electric Drums</button>
         </form>
       </div>
     </div>
@@ -69,8 +74,8 @@
       <br>
       <div class="card-footer" style="background-color: white;">
         <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
-        <input type="text" class="form-control d-none" value="Cymbal" name="q">
-        <button class="btn btn-warning btn-lg active" type="search">Cymbals</button>
+          <input type="text" class="form-control d-none" value="Cymbal" name="q">
+          <button class="btn btn-warning btn-lg active" type="search">Cymbals</button>
         </form>
       </div>
     </div>
@@ -82,14 +87,15 @@
       <img class="card-img-top" src="/media/images/snareCat.jpg" alt="Snare Drum" style="padding-bottom: 20px;"></img>
       <div class="card-footer" style="background-color: white;">
         <form class="width-removal" action="{% url 'search' %}" method="get" style="padding-left: 15px;">
-        <input type="text" class="form-control d-none" value="SNARE DRUM" name="q">
-        <button class="btn btn-warning btn-lg active" type="search">Snare Drums</button>
+          <input type="text" class="form-control d-none" value="SNARE DRUM" name="q">
+          <button class="btn btn-warning btn-lg active" type="search">Snare Drums</button>
         </form>
       </div>
     </div>
   </div>
 </div>
 
+<!--Image slider section for some products-->
 <br>
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
@@ -105,6 +111,7 @@
   </div>
 </div>
 
+<!-- Newsletter section Header -->
 <br>
 <br>
 <div class="container h-100">
@@ -116,11 +123,11 @@
   </div>
 </div>
 
+<!-- Newsletter section -->
 <div class="row">
   <div class="col-sm-6 col-md-4 ">
     <p class="lead mb-0">Subscribe to our newsletters and remain informed!</p>
   </div>
-
   <div class="col-sm-6 col-md-4 ">
     <input class="form-control" type="email" name="subemail" placeholder="email" required/>
     <br>
@@ -128,6 +135,7 @@
   </div>
 </div>
 
+<!-- Contact phone number and delivery information section -->
 <br>
 <br>
 <br>
@@ -167,4 +175,5 @@
     </div>
   </div>
 </div>
-<hr> {% endblock %}
+<hr> 
+{% endblock %}

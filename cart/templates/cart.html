@@ -1,45 +1,47 @@
-{% extends 'base.html' %}
-{% load static from staticfiles %}
-{% load bootstrap_tags %}
-
+{% extends 'base.html' %} 
+{% load static from staticfiles %} 
+{% load bootstrap_tags %} 
 {% block content %}
 
+<!-- Cart Page Header -->
 <div class="container h-100">
-  <div class="d-flex h-100 text-center align-items-center">
-    <div class="w-100 text-dark">
-      <h1>Cart</h1>
-      <hr>
+    <div class="d-flex h-100 text-center align-items-center">
+        <div class="w-100 text-dark">
+            <h1>Shopping Cart</h1>
+            <hr>
+        </div>
     </div>
-  </div>
 </div>
 
-     {% if total == 0 %}
-        <div class="row">
-            <div class="col-12 text-center h2-padding-top">
-                <h4>There are no items in the shopping-cart.</h4>
-            </div>
-            <br>
-            <br>
-            <br>
-            <br>
-             <div class="col-12 text-center h2-padding-top">
-                <a href="{% url 'products' %}" class="btn btn-warning btn-lg active" role="button" aria-pressed="true"> Back to Shop </a>
-            </div>
-        </div>
-        {% else %}
+<!-- Cart Items Section -->
+{% if total == 0 %}
+<div class="row">
+    <div class="col-12 text-center h2-padding-top">
+        <h4>There are no items in the shopping-cart.</h4>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="col-12 text-center h2-padding-top">
+        <a href="{% url 'products' %}" class="btn btn-warning btn-lg active" role="button" aria-pressed="true"> Back to Shop </a>
+    </div>
+</div>
+{% else %}
+
+ <!-- Cart Items -->
 <div class="row row-flex">
     {% for item in cart_items %}
-
     <div class="col-lg-4 col-md-6 mb-4 panel panel-default">
-        
+
         <div class="panel-body" style="box-shadow: 5px 10px #888888; border-radius: 8px; background-color: white; margin-bottom: 10px;">
-        <br>
-        <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
-        <br>
-        <div class="caption">
-            <h6 style="margin-left: 10px;">{{ item.product.name }}</h6>
-            <h5 style="margin-left: 10px;">£ {{ item.product.price }}</h5>
-            <hr>
+            <br>
+            <div class="product" style="background-image: url('{{ MEDIA_URL }}{{ item.product.image }}')"></div>
+            <br>
+            <div class="caption">
+                <h6 style="margin-left: 10px;">{{ item.product.name }}</h6>
+                <h5 style="margin-left: 10px;">£ {{ item.product.price }}</h5>
+                <hr>
                 <form class="form-inline" method="post" action="{% url 'adjust_cart' item.id %}">
                     {% csrf_token %}
                     <div class="form-group">
@@ -51,31 +53,34 @@
                         </div>
                     </div>
                     <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-4 display panel panel-display">
-                    <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Adjust</button>
+                        <button type="submit" class="btn btn-warning"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span>Adjust</button>
                     </div>
                 </form>
-        </div>
+            </div>
         </div>
     </div>
     {% endfor %}
 </div>
 <br>
+
+<!-- Price Summary Section -->
 <div class="row" style="margin-left: 10px;">
     <h5>Subtotal: £ {{ subtotal }}</h5>
 </div>
 <hr>
 <div class="row" style="margin-left: 10px;">
-    <h5>Shipping:   FREE</h5>
+    <h5>Shipping: FREE</h5>
 </div>
-
 <br>
 <hr>
 <div class="row" style="margin-left: 10px;">
-      <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span> <h5>TOTAL: £ {{ total }}</h5></p>
+    <p><span class="glyphicon glyphicon-euro" aria-hidden="true"></span>
+        <h5>TOTAL: £ {{ total }}</h5>
+    </p>
 </div>
 <br>
 <div class="row" style="margin-left: 15px;">
     <a href="{% url 'checkout' %}" class="btn btn-warning" role="button"><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Checkout</a>
 </div>
-{% endif %}
+{% endif %} 
 {% endblock %}
