@@ -35,10 +35,13 @@ When a user clicks the read more button to view a product they can view the prod
 <img src="/media/images/Home pic.jpeg">
 <br>
 
-<p>• Register/ Login to use the online shop.</p>
+<p>• Register to use the online shop.</p>
 <hr>
 <img src="/media/images/Register pic.png">
 <br>
+
+<p>• Login to use the online shop.</p>
+<hr>
 <img src="/media/images/Login pic.png">
 <br>
 
