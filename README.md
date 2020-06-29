@@ -37,9 +37,9 @@ When a user clicks the read more button to view a product they can view the prod
 
 <p>• Register/ Login to use the online shop.</p>
 <hr>
-<img src="">
+<img src="/media/images/Register pic.png">
 <br>
-<img src="">
+<img src="/media/images/Login pic.png">
 <br>
 
 <p>• Go to the Shop page where all the products will be shown.</p>
